@@ -1,0 +1,118 @@
+:root{
+    --color-white:#fff;
+    --color-dark1:#27272723;
+    --color-dark2:#2d2d2d;
+    --color-dark3:#414141;
+    --color-active:#1921638a;
+    --color-darkheader:#414141;
+    --color-dark5:#343434;
+    --color-blue1:#7a9dc5;
+    --color-blue2:#66a4a8;
+    --color-blue3:#02383d;
+    --color-blue4:#0f023d;
+    --color-blue5:#0400ff70;
+    --color-blue6:#030164;
+}
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: var(--color-aqua); */
+    background-image: linear-gradient(
+        45deg,var(--color-blue1),var(--color-blue2)
+    );
+    color: var(--color-white);
+}
+.imgheader{
+    width: 45px;
+}
+.header, .navigation_header{
+display: flex;
+flex-direction: row;
+align-items: center;
+
+}
+.header{
+    background-color: var(--color-dark1);
+    box-shadow: 1px 1px px var(--color-dark4);
+    height: 70px;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+.navigation_header{
+    gap: 15px;
+}
+.navigation_header a{
+text-decoration: none;
+color: var(--color-white);
+transition: 0.3s;
+font-weight: bold;
+}
+.navigation_header a:hover{
+    color: var(--color-active);
+}
+.active{
+    background-color:var(--color-active);
+    padding: 10px;
+    border-radius: 20px;
+}
+.content{
+    text-align: center;
+    padding: 50px;
+    height: 100vh;
+    transition: 1s;
+}
+.btn_icon_header{
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+}
+@media screen and (max-width: 768px){
+    .btn_icon_header{
+        display: block;
+    }
+    .navigation_header{
+        position:absolute;
+        flex-direction: column;
+        top: 0;
+        background-color: var(--color-dark5);
+        height: 100%;
+        width: 35vw;
+        padding: 16px;
+        animation-duration: 0.5s;
+        margin-left: -100vw;
+    }
+    @keyframes showSidebar{
+        from{margin-left: -100vw;}
+        top{margin-left: -10vw;}
+    }
+
+}
+   
+
+
+h1{
+    color: var(--color-blue4);
+}
+.subtitle{
+    color: var(--color-blue3);
+    padding: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    
+}
+.skills{
+    margin-top: 150px;
+    color: var(--color-blue6);
+    text-align: center;
+    font-size: 30px;
+    border: solid black 1px;
+    border-radius: 15px;
+    
+}
